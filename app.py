@@ -158,4 +158,7 @@ with gradio_app:
         with gr.Column():
             app()
 if __name__ == '__main__':
-    gradio_app.launch()
+    gradio_app.launch(
+        server_name="0.0.0.0",  # 关键修改：允许外部访问
+        # server_port=7860  # 可选：指定端口（默认7860可省略）
+    )
